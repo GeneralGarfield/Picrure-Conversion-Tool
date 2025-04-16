@@ -1,12 +1,3 @@
-# Program Converter GUI
-# Description: 
-#   Converts images to pdf or pdf to images
-#
-# Author: GeneralGarfield
-# Date: 4/1/2025
-# Revised: 
-#   4/15/2025
-
 
 
 
@@ -78,6 +69,13 @@ def radiobuttons():
 def imageopener_and_Conversion():
 
     def Conversion1():
+        
+        user_input = str(entry1.get())
+
+        if not user_input.strip():
+            tk.messagebox.showerror(title="No name", message="Please name your file")
+
+
         script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Path to the "output" folder inside the script directory
@@ -116,15 +114,6 @@ def imageopener_and_Conversion():
             os.makedirs(output_path4)
 
         
-
-        
-
-        
-
-        user_input = str(entry1.get())
-
-        if not user_input.strip():
-            tk.messagebox.showerror(title="No name", message="Please name your file")
 
         
         
@@ -283,7 +272,7 @@ def Conversions():
 
 directory_path = os.path.dirname(__file__)
 
-file_path = os.path.join(directory_path, 'test.ico')
+file_path = os.path.join(directory_path, 'Icon.ico')
 
 # Creates the main Window and Icon
 
@@ -321,13 +310,6 @@ filemenu.add_command(label="Exit", command=root.destroy)
 menubar.add_cascade(label="Files", menu=filemenu)
 
 # Help Option
-
-Help = Menu(menubar, tearoff=0)
-
-# Help.add_command(label="Tutorial", command=Tutorial)  # Example placeholder
-
-menubar.add_cascade(label="Help", menu=Help)
-
 # About me
 
 About = Menu(menubar, tearoff=0)
@@ -354,7 +336,7 @@ text = tk.Label(text="Welcome to the PDF convertion tool!", font=font1)
 
 text2 = tk.Label(text="Made by Ricardo", font=font1a)
 
-text3 = tk.Label(text="Select Image To start Conversion!", font=font1)
+text3 = tk.Label(text="Select Image!", font=font1)
 
 text4 = tk.Label(text="Select Converstion", font=font1a)
 
@@ -365,7 +347,7 @@ text5 = tk.Label(text="Name Your file!", font=font1a)
 # -----------------------------------------------   This Button opens up the file   --------------------------------------------
 
 
-Button_for_FILE = tk.Button(text="Click Here!", command=imageopener_and_Conversion)
+Button_for_FILE = tk.Button(text="Open FIle", command=imageopener_and_Conversion)
 
 
 
@@ -395,3 +377,4 @@ text2.pack()
 
 # Run the main loop
 root.mainloop()
+

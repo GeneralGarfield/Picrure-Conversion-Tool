@@ -4,7 +4,7 @@
 A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to your desire conversion.
 
 > [!NOTE]
-> Must have The Pillow Library Module installed You can install using this:
+> Must have The Pillow Library Module installed You can install using this: 
 >  `pip install pillow`
 
 > [!IMPORTANT]

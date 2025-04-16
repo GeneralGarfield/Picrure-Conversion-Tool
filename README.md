@@ -10,6 +10,9 @@ A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to yo
 > [!IMPORTANT]
 > Run the Program using IDLE, For some reason the program wont run properly if u you use VS code, or a python exe runner.
 
+> [!TIP]
+> If you do not want to install python or any modules Use the EXE provided in the release. It may say it's a virus, but it's not!
+
 # Features
 - Converts Images into PDF, JPEG, PNG, and ICO
 - Conversions are organized into folders (ex. a .pdf file goes to a PDF folder)

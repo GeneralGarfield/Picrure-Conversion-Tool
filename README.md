@@ -3,6 +3,13 @@
 
 A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to your desire conversion.
 
+> [!NOTE]
+> Must have The Pillow Library Module installed You can install using this:
+>  `pip install pillow`
+
+> [!IMPORTANT]
+> Run the Program using IDLE, For some reason the program wont run if u you use VS code, or a python exe runner.
+
 # Features
 - Converts Images into PDF, JPEG, PNG, and ICO
 - Conversions are organized into folders (ex. a .pdf file goes to a PDF folder)
@@ -20,7 +27,6 @@ Coded by GeneralGarfield
 
 
 
-
 # Special Thanks
 - Beta Testers
 - Carl Gregory
@@ -28,13 +34,8 @@ Coded by GeneralGarfield
 - auto-py-to-exe
 - Tkinter
 
-# Note
-- Must have the latest version Of Python
-- Must have The Pillow Library Module installed You can install using this:
 
-  pip install pillow
 
-- Run the script using IDLE, sometimes running it using VS Code or an older version of python may cause errors.
 
 
 

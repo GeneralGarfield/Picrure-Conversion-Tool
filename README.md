@@ -2,8 +2,7 @@
 
 
 A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to your desire conversion. 
-This tool is free and can be used for whatever reason. 
-This program wont damage or cause any harm to your device. 
+This tool is free and can be used for whatever reason.  
 Modifications will happen to images, but the original Image will remain the same. In short we are only creating
 a new image out of your already exsisting Image.
 

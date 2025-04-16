@@ -8,7 +8,7 @@ A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to yo
 >  `pip install pillow`
 
 > [!IMPORTANT]
-> Run the Program using IDLE, For some reason the program wont run if u you use VS code, or a python exe runner.
+> Run the Program using IDLE, For some reason the program wont run properly if u you use VS code, or a python exe runner.
 
 # Features
 - Converts Images into PDF, JPEG, PNG, and ICO

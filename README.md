@@ -4,7 +4,7 @@
 A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to your desire conversion.
 
 # Features
-- Converts Images into PDF, JPEG, PNG, and ICO as of right now
+- Converts Images into PDF, JPEG, PNG, and ICO
 - Conversions are organized into folders (ex. a .pdf file goes to a PDF folder)
 
 # To be Added

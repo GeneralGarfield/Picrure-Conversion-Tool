@@ -28,7 +28,13 @@ Coded by GeneralGarfield
 - auto-py-to-exe
 - Tkinter
 
+# Note
+- Must have the latest version Of Python
+- Must have The Pillow Library Module installed You can install using this:
 
+  pip install pillow
+
+- Run the script using IDLE, sometimes running it using VS Code or an older version of python may cause errors.
 
 
 

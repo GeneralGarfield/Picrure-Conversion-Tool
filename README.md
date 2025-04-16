@@ -15,6 +15,10 @@ A Python GUI Script/exe File that converts JPEG, PNG, ICO, and other files to yo
 - Select your own Output folder
 - Add Credits
 
+# Special Thanks
+- Beta Testers
+- Developers
+
 
 
 

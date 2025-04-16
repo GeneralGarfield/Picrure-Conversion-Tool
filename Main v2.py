@@ -2,10 +2,10 @@
 # Description: 
 #   Converts images to pdf or pdf to images
 #
-# Author: Ricardo Montoya-Adame 
+# Author: GeneralGarfield
 # Date: 4/1/2025
 # Revised: 
-#   4/05/2025
+#   4/15/2025
 
 
 

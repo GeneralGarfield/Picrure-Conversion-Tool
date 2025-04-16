@@ -23,9 +23,10 @@ Coded by GeneralGarfield
 
 # Special Thanks
 - Beta Testers
-- Developers
+- Carl Gregory
 - Pillow
 - auto-py-to-exe
+- Tkinter
 
 
 

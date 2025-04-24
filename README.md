@@ -30,14 +30,14 @@ a new image out of your already exsisting Image.
 > This Program is offered as is. Any damage you cause by using this device is on you. I am not responsible for any corruption, destruction, or missing files. By using this app you agree that you accept the risks
 
 # Features
-- Converts Images into PDF, JPEG, PNG, and ICO
+- Converts Images into PDF, JPEG, PNG, ICO, and other files
 - Conversions are organized into folders (ex. a .pdf file goes to a PDF folder)
+- Asks the user if they want their file to be overwritten
+- Added a Sourcecode link in the About
 
 # To be Added
 - A complete PDF Conversion tool (as of right now images can be turned into a PDF, but not the other way around)
-- Multiple Files Conversion
 - Add A Tutorial to the menu
-- Add a splash screen before the app opens
 - Select your own Output folder
 - Add Credits
 

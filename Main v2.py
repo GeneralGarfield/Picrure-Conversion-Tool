@@ -19,7 +19,10 @@ import webbrowser
 
 from PIL import Image, ImageTk
 
+
 import subprocess
+
+
 
 
 
@@ -220,229 +223,366 @@ def imageopener_and_Conversion():
         
             if value == 1:
 
-                if os.path.exists(file_path_to_output_pdf):
+                def this_sucks_balls1():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
-
-                    if yesorno == True:
-
-                        image.save(f"{output1}/{user_input}.pdf")
-
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
-
-                    elif yesorno == False:
-
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
-
-                else:
-                    image.save(f"{output1}/{user_input}.pdf")
-
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    try:
 
 
+                        if os.path.exists(file_path_to_output_pdf):
 
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+
+                            if yesorno == True:
+
+                               
+                                image = Image.open(file_path)
+
+
+                                image.save(f"{output1}/{user_input}.pdf")
+
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            
+                            image = Image.open(file_path)
+
+                            image.save(f"{output1}/{user_input}.pdf")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls1()
+                
+
+# -----------------------------------------------------
             elif value == 2:
 
-                if os.path.exists(file_path_to_output_Jpeg):
-
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
-
-                    if yesorno == True:
-
-                        image.convert("RGB")
-
-                        image.save(f"{output2}/{user_input}.jpeg")
-
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
-
-                    elif yesorno == False:
-
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
-
-                else:
-
-                    im = image.convert("RGB")
-
-                    im.save(f"{output2}/{user_input}.jpeg")
-
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                def this_sucks_balls2():
 
 
+                    try:
+
+
+                        if os.path.exists(file_path_to_output_Jpeg):
+
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+
+                            if yesorno == True:
+
+                                image = Image.open(file_path).convert("RGB")
+
+                                image.save(f"{output2}/{user_input}.jpeg")
+
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            image = Image.open(file_path).convert("RGB")
+
+                            image.save(f"{output2}/{user_input}.jpeg")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                
+                    except:
+
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls2()
+
+
+# -----------------------------------------------------
 
 
             elif value == 3:
 
-                if os.path.exists(file_path_to_output_ico):
+                def this_sucks_balls3():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                    try:
 
-                    if yesorno == True:
 
-                        image.save(f"{output3}/{user_input}.ico")
+                        if os.path.exists(file_path_to_output_ico):
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                    elif yesorno == False:
+                            if yesorno == True:
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                image = Image.open(file_path)
 
-                else:
+                                image.save(f"{output3}/{user_input}.ico")
 
-                    image.save(f"{output3}/{user_input}.ico")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            image = Image.open(file_path)
+
+                            image.save(f"{output3}/{user_input}.ico")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls3()
+# -----------------------------------------------------
 
             elif value == 4:
 
-                if os.path.exists(file_path_to_output_png):
+                def this_sucks_balls4():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                    try:
 
-                    if yesorno == True:
 
-                        image.save(f"{output4}/{user_input}.png")
+                        if os.path.exists(file_path_to_output_png):
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                    elif yesorno == False:
+                            if yesorno == True:
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                image = Image.open(file_path)
 
-                else:
+                                image.save(f"{output4}/{user_input}.png")
 
-                    image.save(f"{output4}/{user_input}.png")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            image = Image.open(file_path)
+
+                            image.save(f"{output4}/{user_input}.png")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls4()
+# -----------------------------------------------------
 
             elif value == 5:
 
-                if os.path.exists(file_path_to_output_ppm):
+                def this_sucks_balls5():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                    try:
 
-                    if yesorno == True:
 
-                        image.save(f"{output5}/{user_input}.ppm")
+                        if os.path.exists(file_path_to_output_ppm):
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                    elif yesorno == False:
+                            if yesorno == True:
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                image = Image.open(file_path).convert("L")
 
-                else:
-                    image.save(f"{output5}/{user_input}.ppm")
+                            
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                                image.save(f"{output5}/{user_input}.ppm")
+
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+                            image = Image.open(file_path).convert("L")
+                            image.save(f"{output5}/{user_input}.ppm")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls5()
+# -----------------------------------------------------
 
             elif value == 6:
-                if os.path.exists(file_path_to_output_pgm):
+                def this_sucks_balls6():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                    try:
 
-                    if yesorno == True:
+                        if os.path.exists(file_path_to_output_pgm):
 
-                        image.save(f"{output6}/{user_input}.pgm")
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                            if yesorno == True:
 
-                    elif yesorno == False:
+                                image = Image.open(file_path).convert("L")
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                image.save(f"{output6}/{user_input}.pgm")
 
-                else:
-                    image.save(f"{output6}/{user_input}.pgm")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            image = Image.open(file_path).convert("L")
+
+                            image.convert("L")
+
+                            image.save(f"{output6}/{user_input}.pgm")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls6()
+# -----------------------------------------------------
 
             elif value == 7:
-                if os.path.exists(file_path_to_output_pbm):
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                def this_sucks_balls7():
 
-                    if yesorno == True:
+                    try:
 
-                        image.save(f"{output7}/{user_input}.pbm")
+                        if os.path.exists(file_path_to_output_pbm):
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                    elif yesorno == False:
+                            if yesorno == True:
+                                
+                                image = Image.open(file_path).convert("L")
+                            
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                image.save(f"{output7}/{user_input}.pbm")
 
-                else:
-                    image.save(f"{output7}/{user_input}.pbm")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            image = Image.open(file_path).convert("L")
+
+                            image.save(f"{output7}/{user_input}.pbm")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+
+                this_sucks_balls7()
+
+# -----------------------------------------------------
 
             elif value == 8:
-                if os.path.exists(file_path_to_output_bmp):
+                def this_sucks_balls8():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                    try:
+                        if os.path.exists(file_path_to_output_bmp):
 
-                    if yesorno == True:
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                        image.save(f"{output8}/{user_input}.bmp")
+                            if yesorno == True:
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                                image = Image.open(file_path)
 
-                    elif yesorno == False:
+                                image.save(f"{output8}/{user_input}.bmp")
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                else:
-                    image.save(f"{output8}/{user_input}.bmp")
+                            elif yesorno == False:
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+                            image = Image.open(file_path)
+                            image.save(f"{output8}/{user_input}.bmp")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls8()
+# -----------------------------------------------------
 
             elif value == 9:
-                if os.path.exists(file_path_to_output_tiff):
+                def this_sucks_balls9():
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                    try:
 
-                    if yesorno == True:
+                        if os.path.exists(file_path_to_output_tiff):
 
-                        image.save(f"{output9}/{user_input}.tiff")
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                            if yesorno == True:
 
-                    elif yesorno == False:
+                                image = Image.open(file_path)
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                image.save(f"{output9}/{user_input}.tiff")
 
-                else:
-                    image.save(f"{output9}/{user_input}.tiff")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
-            
+                            elif yesorno == False:
+
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                
+                        else:
+                            image = Image.open(file_path)
+                            image.save(f"{output9}/{user_input}.tiff")
+
+        
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls9()
+
+# -----------------------------------------------------
+
             elif value == 10:
-                if os.path.exists(file_path_to_output_webp):
+                def this_sucks_balls_number_fucking_10():
+                
+                    try:
 
-                    yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
+                        if os.path.exists(file_path_to_output_webp):
 
-                    if yesorno == True:
+                            yesorno = tk.messagebox.askyesno(title = "Overwrite", message = "A file with that name exists already. Would you like to overwrite your file?")
 
-                        image.save(f"{output10}/{user_input}.webp")
+                            if yesorno == True:
 
-                        tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
+                                image = Image.open(file_path)
 
-                    elif yesorno == False:
+                                image.save(f"{output10}/{user_input}.webp")
 
-                        tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+                                tk.messagebox.showinfo(title= "Success", message= "File Converted successfully!")
 
-                else:
-                    image.save(f"{output10}/{user_input}.webp")
+                            elif yesorno == False:
 
-                    tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                                tk.messagebox.showinfo(title= "Name Error", message = "File was not converted. Change the file name into a new name.")
+
+                        else:
+
+                            image = Image.open(file_path)
+                    
+                            image.save(f"{output10}/{user_input}.webp")
+
+                            tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
+                    
+                    except:
+                        tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
+                this_sucks_balls_number_fucking_10()
 
         except:
-            tk.messagebox.showerror(title= "Error", message= "New name of the file is invalid")
-            
+                tk.messagebox.showerror(title= "CRITICAL ERROR", message= "A CRITICAL ERROR HAS OCCURED! PLEASE RESTART!")
+                
 
+# -----------------------------------------------------        
 
 #-------------------------------------------------------------End of Function
 
-    file_path = file_opener()  # Get the file path from file_opener
+    file_path = file_opener() # Get the file path from file_opener
     
 
     try:

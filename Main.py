@@ -1,8 +1,4 @@
-
-
-
-#Fixed
-# Libraries
+# Libraries Used
 import tkinter as tk
 
 import tkinter.font as font
@@ -65,6 +61,16 @@ def radiobuttons():
 
 
    return selection
+
+def validate_input(new_value):
+    # Set the maximum number of characters allowed
+    max_length = 30
+    if len(new_value) > max_length:
+        return False  # Reject the input if it's too long
+    return True  # Allow the input
+
+
+
 
 def imageopener_and_Conversion():
 
@@ -223,7 +229,7 @@ def imageopener_and_Conversion():
         
             if value == 1:
 
-                def this_sucks_balls1():
+                def PDF():
 
                     try:
 
@@ -256,13 +262,13 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls1()
+                PDF()
                 
 
 # -----------------------------------------------------
             elif value == 2:
 
-                def this_sucks_balls2():
+                def JPEG():
 
 
                     try:
@@ -295,7 +301,7 @@ def imageopener_and_Conversion():
                     except:
 
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls2()
+                JPEG()
 
 
 # -----------------------------------------------------
@@ -303,7 +309,7 @@ def imageopener_and_Conversion():
 
             elif value == 3:
 
-                def this_sucks_balls3():
+                def ICO():
 
                     try:
 
@@ -333,12 +339,12 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls3()
+                ICO()
 # -----------------------------------------------------
 
             elif value == 4:
 
-                def this_sucks_balls4():
+                def PNG():
 
                     try:
 
@@ -368,12 +374,12 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls4()
+                PNG()
 # -----------------------------------------------------
 
             elif value == 5:
 
-                def this_sucks_balls5():
+                def PPM():
 
                     try:
 
@@ -403,11 +409,11 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls5()
+                PPM()
 # -----------------------------------------------------
 
             elif value == 6:
-                def this_sucks_balls6():
+                def PGM():
 
                     try:
 
@@ -438,12 +444,12 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls6()
+                PGM()
 # -----------------------------------------------------
 
             elif value == 7:
 
-                def this_sucks_balls7():
+                def PBM():
 
                     try:
 
@@ -474,12 +480,12 @@ def imageopener_and_Conversion():
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
 
-                this_sucks_balls7()
+                PBM()
 
 # -----------------------------------------------------
 
             elif value == 8:
-                def this_sucks_balls8():
+                def BMP():
 
                     try:
                         if os.path.exists(file_path_to_output_bmp):
@@ -505,11 +511,11 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls8()
+                BMP()
 # -----------------------------------------------------
 
             elif value == 9:
-                def this_sucks_balls9():
+                def TIFF():
 
                     try:
 
@@ -537,12 +543,12 @@ def imageopener_and_Conversion():
                             tk.messagebox.showinfo(title= "Sucsess", message= "File Converted successfully!")
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls9()
+                TIFF()
 
 # -----------------------------------------------------
 
             elif value == 10:
-                def this_sucks_balls_number_fucking_10():
+                def WEBP():
                 
                     try:
 
@@ -572,7 +578,7 @@ def imageopener_and_Conversion():
                     
                     except:
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
-                this_sucks_balls_number_fucking_10()
+                WEBP()
 
         except:
                 tk.messagebox.showerror(title= "CRITICAL ERROR", message= "A CRITICAL ERROR HAS OCCURED! PLEASE RESTART!")
@@ -655,7 +661,9 @@ def imageopener_and_Conversion():
 
             Conversion_button.place(x=400, y=200)
 
-            entry1 = tk.Entry(root, width=30)
+            vcmd = (root.register(validate_input), '%P')
+
+            entry1 = tk.Entry(root, width=30, validate="key", validatecommand=vcmd)
         
             entry1.place(x=350, y =140)
 

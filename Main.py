@@ -34,7 +34,7 @@ def file_opener():
     # Open the file dialog and return the selected file path
     try:
         
-        file = filedialog.askopenfile(mode="r", filetypes=[("All Files", "*.jpeg *.png *.ico")])
+        file = filedialog.askopenfile(mode="r", filetypes=[("All Files", "*.jpeg *.png *.ico *.bmp *.pbm *.pgm *.ppm *.webp *.tiff")])
     
         if file:
 

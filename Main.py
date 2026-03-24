@@ -1,41 +1,20 @@
 # Libraries Used
 import tkinter as tk
-
 import tkinter.font as font
-
 from tkinter import Menu, filedialog, messagebox
-
 from tkinter import *
-
 from tkinter import ttk
-
 import os
-
 import webbrowser
-
 from PIL import Image, ImageTk
-
-
 import subprocess
-
-
-
-
-
-
-
-
 # Functions for the Menu
-
-
-
 
 def file_opener():
     # Open the file dialog and return the selected file path
     try:
-        
         file = filedialog.askopenfile(mode="r", filetypes=[("All Files", "*.jpeg *.png *.ico *.bmp *.pbm *.pgm *.ppm *.webp *.tiff")])
-    
+        
         if file:
 
             return file.name
@@ -69,24 +48,11 @@ def validate_input(new_value):
         return False  # Reject the input if it's too long
     return True  # Allow the input
 
-
-
-
 def imageopener_and_Conversion():
-
-
-
-    
     def Conversion1():
-
-        
         try:
-
             user_input = str(entry1.get())
 
-
-
-        
             script_dir = os.path.dirname(os.path.abspath(__file__))
 
             # Path to the "output" folder inside the script directory
@@ -97,7 +63,6 @@ def imageopener_and_Conversion():
                 tk.messagebox.showwarning(title="No Folder Found", message="The Conversions folder was not found. The Conversion folder will be Created")
 
                 os.makedirs(output_path)
-
         
             script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -177,13 +142,6 @@ def imageopener_and_Conversion():
 
                 os.makedirs(output_path10)
 
-
-
-
-        
-
-        
-        
             value = radiobuttons()
 
             output1 = "Conversions/PDF"
@@ -226,13 +184,11 @@ def imageopener_and_Conversion():
 
             file_path_to_output_webp = f"{output10}/{user_input}.webp"
 
-        
             if value == 1:
 
                 def PDF():
 
                     try:
-
 
                         if os.path.exists(file_path_to_output_pdf):
 
@@ -240,9 +196,7 @@ def imageopener_and_Conversion():
 
                             if yesorno == True:
 
-                               
                                 image = Image.open(file_path)
-
 
                                 image.save(f"{output1}/{user_input}.pdf")
 
@@ -270,9 +224,7 @@ def imageopener_and_Conversion():
 
                 def JPEG():
 
-
                     try:
-
 
                         if os.path.exists(file_path_to_output_Jpeg):
 
@@ -303,16 +255,13 @@ def imageopener_and_Conversion():
                         tk.messagebox.showerror(title = "ERROR", message= "An error has occured. The file may have not been named. If that's not the case please Report!")
                 JPEG()
 
-
 # -----------------------------------------------------
-
 
             elif value == 3:
 
                 def ICO():
 
                     try:
-
 
                         if os.path.exists(file_path_to_output_ico):
 
@@ -347,7 +296,6 @@ def imageopener_and_Conversion():
                 def PNG():
 
                     try:
-
 
                         if os.path.exists(file_path_to_output_png):
 
@@ -694,12 +642,6 @@ def Conversions():
     subprocess.run(["explorer", output_path])
 
 
-
-
-
-
-
-
 # -----------------------------------------------------------------------------------------------------------------------------
 
     #                           
@@ -719,8 +661,7 @@ def Conversions():
 # Opens file for the icon
 
 
-
-# Creat
+# Create
 
 
 try:
